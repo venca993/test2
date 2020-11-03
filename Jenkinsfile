@@ -19,7 +19,8 @@ node {
          * Run a curl inside the newly-build Docker image */
 
         app.inside {
-            sh 'sleep 200 && curl http://localhost:8000 || exit 1'
+            sh 'nodejs main.js'
+            sh 'curl http://localhost:8000 || exit 1'
         }
     }
 
